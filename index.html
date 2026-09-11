@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Solar Career Webinar | AEERO Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --primary-yellow: #DDA73B;
+    --primary-navy: #0B1F38;
+    --primary-red: #8A0303;
+    --text-dark: #333333;
+    --text-gray: #666666;
+    --bg-light: #F8F9FA;
+    --bg-white: #FFFFFF;
+    --green-check: #22C55E;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 15px rgba(0,0,0,0.08);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+    --radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* BUTTONS */
+.btn-red {
+    display: inline-block;
+    background-color: var(--primary-red);
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(138, 3, 3, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+.btn-red:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(138, 3, 3, 0.4);
+}
+.btn-red del {
+    opacity: 0.7;
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* TOP NOTIFICATION BAR */
+.top-bar-notification {
+    background: var(--primary-navy);
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+}
+.top-bar-notification .highlight {
+    color: var(--primary-yellow);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+.top-bar-notification .small-text {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.9;
+    margin-top: 0.2rem;
+    font-weight: 400;
+}
+
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    padding: 5rem 0 4rem;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(200,200,200,0.05) 10px, rgba(200,200,200,0.05) 20px);
+    z-index: 0;
+}
+
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    width: 200%; height: 200%;
+    top: -50%; left: -50%;
+    background: radial-gradient(ellipse at center, transparent 30%, #fff 70%);
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-pill-wrap {
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 40;
+}
+
+.hero-pill {
+    background-color: var(--primary-red);
+    color: #fff;
+    padding: 0.5rem 2.5rem;
+    border-radius: 0 0 16px 16px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hero-header {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.main-headline {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+.text-yellow { color: var(--primary-yellow); }
+.text-navy { color: var(--primary-navy); }
+
+.sub-headline {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-yellow);
+    margin-bottom: 1rem;
+}
+
+.supporting-text {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* HERO GRID */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.video-box {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: #000;
+    aspect-ratio: 16/9;
+}
+
+.video-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px; height: 50px;
+    background: #FF0000;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255,0,0,0.4);
+}
+.play-btn::after {
+    content: '';
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #fff;
+    margin-left: 5px;
+}
+
+.video-overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 0; width: 100%;
+    text-align: center;
+}
+.video-overlay-text span {
+    background: var(--primary-yellow);
+    color: var(--primary-navy);
+    padding: 4px 15px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* TRAINER CARD */
+.trainer-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    margin-top: 1.2rem;
+    border: 1px solid #eaeaea;
+}
+
+.trainer-pill {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-red);
+    color: #fff;
+    padding: 0.3rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.trainer-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.trainer-img {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    border: 3px solid #eaeaea;
+    object-fit: cover;
+}
+
+.trainer-details h3 {
+    color: var(--primary-navy);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.trainer-details p {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* INFO GRID */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.info-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.info-icon {
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--primary-red);
+    border-radius: 50%;
+    color: var(--primary-red);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.info-text span {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--primary-red);
+    font-weight: 600;
+}
+.info-text strong {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+}
+
+/* COUNTDOWN */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 2rem 0 1.5rem;
+}
+
+.cd-box {
+    text-align: center;
+}
+
+.cd-circle {
+    width: 50px; height: 50px;
+    background: var(--primary-navy);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    box-shadow: 0 4px 10px rgba(11, 31, 56, 0.2);
+}
+
+.cd-label {
+    font-size: 0.65rem;
+    color: var(--text-gray);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* SECTION 2: WHAT YOU WILL GET */
+.features-section {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary-navy);
+    margin-bottom: 3rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #eaeaea;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.check-icon {
+    color: var(--green-check);
+    background: rgba(34, 197, 94, 0.1);
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.feature-card-center {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+}
+
+.features-btn-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* SECTION: CAREER OPPORTUNITIES */
+.career-section {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+.career-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #eaeaea;
+}
+.career-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-yellow);
+}
+.career-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.career-card h4 {
+    color: var(--primary-navy);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* SECTION 3: SOCIAL PROOF */
+.social-proof-section {
+    padding: 4rem 0;
+    background: #EFEFEF;
+}
+
+.video-testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.vt-card {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    background: #000;
+    box-shadow: var(--shadow-md);
+}
+
+.vt-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.vt-play {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px; height: 50px;
+    background: rgba(0,0,0,0.8);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+}
+.vt-play::after {
+    content: '';
+    border-style: solid;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent #fff;
+    margin-left: 4px;
+}
+
+.vt-icon-top {
+    position: absolute;
+    top: 10px; right: 10px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.text-testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.tt-card {
+    background: #fff;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.tt-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.tt-avatar {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--primary-navy);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.tt-info h4 {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+}
+.tt-info span {
+    font-size: 0.7rem;
+    color: var(--text-gray);
+}
+
+.tt-stars {
+    color: var(--primary-yellow);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.tt-card p {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .video-box { max-width: 700px; margin: 0 auto; }
+    .hero-info-col { max-width: 600px; margin: 0 auto; }
+    .features-grid { grid-template-columns: 1fr; }
+    .video-testimonials, .text-testimonials { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .career-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 576px) {
+    .main-headline { font-size: 2rem; }
+    .sub-headline { font-size: 1.1rem; }
+    .info-grid { grid-template-columns: 1fr; }
+    .hero-pill { font-size: 0.9rem; padding: 0.5rem 1.5rem; }
+    .section-title { font-size: 1.8rem; }
+    .career-grid { grid-template-columns: 1fr; }
+}
+
+/* SECTION 4: WHO IS THIS FOR */
+.who-section {
+    padding: 4rem 0;
+    background: #fff;
+}
+.who-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.who-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #eaeaea;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.who-card p {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+.who-card-center {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+}
+
+/* SECTION: ROADMAP */
+.roadmap-section {
+    padding: 5rem 0;
+    background: var(--bg-white);
+}
+.roadmap-container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+.roadmap-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.roadmap-item:last-child {
+    margin-bottom: 0;
+}
+.roadmap-number {
+    background: var(--primary-red);
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(138, 3, 3, 0.3);
+}
+.roadmap-line {
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    bottom: -2rem;
+    width: 2px;
+    background: #eaeaea;
+    z-index: 1;
+}
+.roadmap-item:last-child .roadmap-line {
+    display: none;
+}
+.roadmap-content {
+    background: #fff;
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #eaeaea;
+    flex-grow: 1;
+}
+.roadmap-content h4 {
+    color: var(--primary-yellow);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+.roadmap-content h3 {
+    color: var(--primary-navy);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* SECTION: COURSE TRANSITION */
+.transition-section {
+    padding: 5rem 0;
+    background: var(--bg-light);
+    text-align: center;
+}
+.transition-card {
+    background: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    padding: 3rem 2rem;
+    box-shadow: var(--shadow-md);
+    border-top: 4px solid var(--primary-yellow);
+}
+.transition-card h3 {
+    font-size: 1.8rem;
+    color: var(--primary-navy);
+    margin-bottom: 1rem;
+}
+.transition-card p {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+.course-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.course-highlight-item {
+    background: var(--bg-light);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-navy);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: var(--primary-red);
+    border: 2px solid var(--primary-red);
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.btn-outline:hover {
+    background: var(--primary-red);
+    color: #fff;
+}
+
+/* SECTION: REGISTRATION FORM */
+.registration-section {
+    padding: 5rem 0;
+    background: var(--primary-navy);
+    color: #fff;
+    position: relative;
+}
+.registration-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    color: var(--text-dark);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+}
+.registration-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.registration-header h2 {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+.registration-header p {
+    color: #eaeaea;
+    font-size: 1.1rem;
+}
+.form-group {
+    margin-bottom: 1.25rem;
+}
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary-navy);
+}
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 2px rgba(138, 3, 3, 0.1);
+}
+.form-safe {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    margin-top: 1rem;
+}
+
+/* SECTION: FINAL CTA */
+.final-cta-section {
+    padding: 6rem 0;
+    background: var(--primary-red);
+    color: #fff;
+    text-align: center;
+}
+.final-cta-section h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--primary-yellow);
+}
+.final-cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.final-cta-section .btn-red {
+    background: var(--primary-yellow);
+    color: var(--primary-navy);
+    box-shadow: 0 4px 15px rgba(221, 167, 59, 0.4);
+    max-width: 400px;
+}
+.final-cta-section .btn-red:hover {
+    background: #fff;
+    color: var(--primary-red);
+}
+
+
+
+/* SECTION 6: FAQ */
+.faq-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.faq-item {
+    background: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.faq-question {
+    padding: 1.25rem 1.5rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--primary-navy);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+.faq-question .toggle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-navy);
+    transition: transform 0.3s;
+}
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+.faq-item.active .faq-answer {
+    padding: 0 1.5rem 1.25rem;
+    max-height: 500px;
+}
+.faq-item.active .toggle {
+    transform: rotate(45deg);
+}
+
+@media (max-width: 992px) {
+    .trainer-container { grid-template-columns: 1fr; }
+    .who-grid { grid-template-columns: 1fr; }
+}
+
+/* STICKY BOTTOM BAR */
+body {
+    padding-bottom: 80px; /* Prevent content from hiding behind sticky bar */
+}
+
+.sticky-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 3px solid var(--primary-red);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 1.5rem 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sticky-bottom-bar.hidden {
+    transform: translateY(100%);
+}
+
+.sticky-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sticky-text-wrap h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-navy);
+    line-height: 1.1;
+}
+
+.sticky-text-wrap h3 del {
+    color: var(--text-gray);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 0.5rem;
+}
+
+.sticky-text-wrap p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-top: 0.4rem;
+}
+
+.sticky-btn {
+    background: linear-gradient(90deg, #7a0000 0%, #b30000 100%);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1rem 10rem; /* Increased padding */
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(138, 3, 3, 0.3);
+    transition: transform 0.2s;
+}
+
+.sticky-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #8a0303 0%, #cc0000 100%);
+    align-items: center;
+}
+
+@media (max-width: 576px) {
+    .sticky-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    .sticky-btn {
+        width: 100%;
+    }
+    body {
+        padding-bottom: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-grid { grid-template-columns: 1fr !important; }
+    .info-grid { grid-template-columns: 1fr !important; }
+    .features-grid { grid-template-columns: 1fr !important; }
+    .career-grid { grid-template-columns: 1fr !important; }
+    .main-headline { font-size: 2rem !important; }
+    .sub-headline { font-size: 1.2rem !important; }
+}
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION (Image 1 & 2) -->
+    <header class="hero-section" style="padding-top: 0; background: radial-gradient(circle at center top, #ffffff 0%, #f4f4f4 100%); overflow: hidden;">
+        <div class="hero-bg" style="background: none;"></div>
+        <div class="container hero-container" style="padding-top: 0; position: relative;">
+            
+            <div class="hero-pill-wrap" style="position: static; text-align: center; width: 100%; transform: none;">
+                <div class="hero-pill" style="border-radius: 0 0 16px 16px; font-size: 1.2rem; padding: 0.75rem 3rem; background: var(--primary-red); color: white; font-weight: 600; display: inline-block;"> FREE Solar Career Webinar</div>
+            </div>
+
+            <div class="hero-header" style="margin-top: 2rem; text-align: center;">
+                <h1 class="main-headline" style="font-size: 2.5rem; font-weight: 800; line-height: 1.2; max-width: 900px; margin: 0 auto;">
+                    <span class="text-yellow">Want to Build a Career in</span> 
+                    <span class="text-navy">Solar Energy, Installation & Bring Positive Growth</span>
+                </h1>
+                <h2 class="sub-headline" style="color: var(--primary-yellow); font-size: 1.25rem; font-weight: 700; margin-top: 1rem;">Using Practical Solar Techniques</h2>
+                <p class="supporting-text" style="font-size: 1.35rem; color: var(--text-dark); margin-top: 1rem;">Learn the fundamentals of solar energy, site survey, and successful installation without prior experience</p>
+            </div>
+
+            <div class="hero-grid" style="grid-template-columns: 1.1fr 0.9fr; align-items: stretch; gap: 2.5rem; margin-top: 3rem;">
+                
+                <!-- Left Column: Video -->
+                <div class="video-box-container" style="display: flex; align-items: center;">
+                    <div class="video-box" style="width: 100%; border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 15px 35px rgba(0,0,0,0.15);">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Webinar Trailer" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        <div style="position: absolute; bottom: 30px; left: 0; width: 100%; text-align: center;">
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Trainer + Info -->
+                <div class="hero-info-col" style="display: flex; flex-direction: column; justify-content: center;">
+                    
+                    <div class="trainer-card" style="margin-top: 0; padding: 2rem 1.5rem; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: none; position: relative; background: #fff;">
+                        <div class="trainer-pill" style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); padding: 6px 25px; border-radius: 8px; background: var(--primary-red); color: white; font-weight: bold; font-size: 1.05rem; white-space: nowrap;">Abhishek Kumar Jha</div>
+                        <div class="trainer-info" style="margin-top: 0; display: flex; align-items: center; gap: 1.5rem;">
+                            <img src="https://i.ibb.co/yFnK6GfK/Chat-GPT-Image-Sep-9-2026-03-55-18-PM.png" alt="Trainer" class="trainer-img" style="border: 4px solid #fff; box-shadow: 0 0 0 3px #cc0000; width: 90px; height: 90px; border-radius: 50%; object-fit: cover;">
+                            <div class="trainer-details">
+                                <h3 style="color: var(--primary-navy); font-size: 1.25rem; font-weight: 800; margin-bottom: 4px;">Solar / Technical Trainer</h3>
+                                <p style="color: var(--text-dark); font-size: 1.05rem; font-weight: 600; line-height: 1.4;">Practical, Industry-Focused<br>Solar Training</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
+                        <div class="info-card" style="background: white; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; align-items: center; gap: 12px; border: 1px solid #eee;">
+                            <div class="info-icon" style="color: var(--primary-red); font-size: 1.8rem; border: none;">📅</div>
+                            <div class="info-text">
+                                <span style="display: block; color: var(--primary-red); font-size: 0.85rem; font-weight: 700; margin-bottom: 2px;">Date</span>
+                                <strong style="display: block; font-size: 1rem; line-height: 1.3; color: var(--text-dark);">14th September<br>Monday</strong>
+                            </div>
+                        </div>
+                        <div class="info-card" style="background: white; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; align-items: center; gap: 12px; border: 1px solid #eee;">
+                            <div class="info-icon" style="color: var(--primary-red); font-size: 1.8rem; border: none;">⏰</div>
+                            <div class="info-text">
+                                <span style="display: block; color: var(--primary-red); font-size: 0.85rem; font-weight: 700; margin-bottom: 2px;">Time</span>
+                                <strong style="display: block; font-size: 1rem; line-height: 1.3; color: var(--text-dark);">2:00 PM - 4:00<br>PM</strong>
+                            </div>
+                        </div>
+                        <div class="info-card" style="background: white; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; align-items: center; gap: 12px; border: 1px solid #eee;">
+                            <div class="info-icon" style="color: var(--primary-red); font-size: 1.8rem; border: none;">📍</div>
+                            <div class="info-text">
+                                <span style="display: block; color: var(--primary-red); font-size: 0.85rem; font-weight: 700; margin-bottom: 2px;">Venue</span>
+                                <strong style="display: block; font-size: 1rem; line-height: 1.3; color: var(--text-dark);">Live on GOOGLE<br>MEET</strong>
+                            </div>
+                        </div>
+                        <div class="info-card" style="background: white; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; align-items: center; gap: 12px; border: 1px solid #eee;">
+                            <div class="info-icon" style="color: var(--primary-red); font-size: 1.8rem; border: none;">🌐</div>
+                            <div class="info-text">
+                                <span style="display: block; color: var(--primary-red); font-size: 0.85rem; font-weight: 700; margin-bottom: 2px;">Language</span>
+                                <strong style="display: block; font-size: 1rem; line-height: 1.3; color: var(--text-dark);">Hindi +<br>English</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Countdown Timer -->
+                    <div class="countdown-container" style="margin-top: 2.5rem;">
+                        <div class="cd-box">
+                            <div class="cd-circle">02</div>
+                            <div class="cd-label">Days</div>
+                        </div>
+                        <div class="cd-box">
+                            <div class="cd-circle">00</div>
+                            <div class="cd-label">Hours</div>
+                        </div>
+                        <div class="cd-box">
+                            <div class="cd-circle">00</div>
+                            <div class="cd-label">Mins</div>
+                        </div>
+                        <div class="cd-box">
+                            <div class="cd-circle">00</div>
+                            <div class="cd-label">Secs</div>
+                        </div>
+                    </div>
+
+                    <a href="#register" class="btn-red" style="margin-top: 1.2rem; display: block;">Register Now</a>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 2: WHAT YOU WILL GET (Image 3) -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">What You'll Get in <span class="text-yellow">1 Hour</span></h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="check-icon">✔</div>
+                    <p><strong>Solar Energy Fundamentals</strong> & Industry Growth opportunities without prior experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="check-icon">✔</div>
+                    <p>Practical Strategies for <strong>Installation & Commissioning Process</strong> in real-world scenarios.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="check-icon">✔</div>
+                    <p>Deep understanding of <strong>Site Surveying & Safety</strong>.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="check-icon">✔</div>
+                    <p>3 secrets to <strong>Jobs, Careers & Entrepreneurship</strong> Opportunities in Solar!</p>
+                </div>
+            </div>
+
+            <div class="feature-card-center">
+                <div class="check-icon">✔</div>
+                <p><strong>Q&A Session</strong> and <strong>3 Powerful Bonuses</strong> inside the webinar.</p>
+            </div>
+
+            <div class="features-btn-wrap">
+                <a href="#register" class="btn-red">Register For <del>₹499</del> FREE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: CAREER OPPORTUNITIES -->
+    <section class="career-section">
+        <div class="container">
+            <h2 class="section-title">Solar Skills Can Open <span class="text-yellow">Multiple Career Paths</span></h2>
+            <p class="supporting-text" style="text-align: center; margin-bottom: 2rem;">From technical installation to maintenance and entrepreneurship, solar skills can open multiple pathways in the renewable energy sector.</p>
+            
+            <div class="career-grid">
+                <div class="career-card">
+                    <div class="career-icon"></div>
+                    <h4>Solar PV Installer</h4>
+                </div>
+                <div class="career-card">
+                    <div class="career-icon"></div>
+                    <h4>Solar Technician</h4>
+                </div>
+                <div class="career-card">
+                    <div class="career-icon"></div>
+                    <h4>Site Survey & Assessment</h4>
+                </div>
+                <div class="career-card">
+                    <div class="career-icon"></div>
+                    <h4>Operations & Maintenance</h4>
+                </div>
+                <div class="career-card">
+                    <div class="career-icon"></div>
+                    <h4>Solar Safety</h4>
+                </div>
+                <div class="career-card">
+                    <div class="career-icon"></div>
+                    <h4>Solar Entrepreneurship</h4>
+                </div>
+            </div>
+
+            <div class="features-btn-wrap" style="text-align: center;">
+                <a href="#register" class="btn-red">EXPLORE SOLAR CAREER</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: SOCIAL PROOF (Image 4) -->
+    <section class="social-proof-section">
+        <div class="container">
+            <h2 class="section-title">Learn With a Career-Focused Training Organisation</h2>
+            
+            <div class="text-testimonials">
+                <div class="tt-card">
+                    <div class="tt-header">
+                        <div class="tt-avatar" style="background:#8D6E63;">R</div>
+                        <div class="tt-info">
+                            <h4>Rahul Sharma</h4>
+                            <span>1 review</span>
+                        </div>
+                    </div>
+                    <div class="tt-stars">★★★★★</div>
+                    <p>"Webinar kaafi useful tha. Mujhe solar installation ka basic process pehle clear nahi tha, but site survey aur installation wala part easily samajh aa gaya."</p>
+                </div>
+                <div class="tt-card">
+                    <div class="tt-header">
+                        <div class="tt-avatar" style="background:#43A047;">A</div>
+                        <div class="tt-info">
+                            <h4>Amit Kumar</h4>
+                            <span>5 reviews</span>
+                        </div>
+                    </div>
+                    <div class="tt-stars">★★★★★</div>
+                    <p>"Good session for beginners. Solar field mein career ke options aur technician ke work ke baare mein practical information mili. Worth attending."</p>
+                </div>
+                <div class="tt-card">
+                    <div class="tt-header">
+                        <div class="tt-avatar" style="background:#5E35B1;">P</div>
+                        <div class="tt-info">
+                            <h4>Priya Verma</h4>
+                            <span>3 reviews</span>
+                        </div>
+                    </div>
+                    <div class="tt-stars">★★★★★</div>
+                    <p>"Honestly, mujhe laga tha webinar sirf promotional hoga, but technical fundamentals bhi properly explain kiye. Beginner ke liye helpful session."</p>
+                </div>
+                <div class="tt-card">
+                    <div class="tt-header">
+                        <div class="tt-avatar" style="background:#D81B60;">S</div>
+                        <div class="tt-info">
+                            <h4>Sandeep Yadav</h4>
+                            <span>2 reviews</span>
+                        </div>
+                    </div>
+                    <div class="tt-stars">★★★★★</div>
+                    <p>"Solar panel installation ka actual process samajhne ke liye webinar attend kiya tha. Site survey aur safety awareness wala part sabse useful laga."</p>
+                </div>
+                <div class="tt-card">
+                    <div class="tt-header">
+                        <div class="tt-avatar" style="background:#F4511E;">N</div>
+                        <div class="tt-info">
+                            <h4>Neha Singh</h4>
+                            <span>4 reviews</span>
+                        </div>
+                    </div>
+                    <div class="tt-stars">★★★★★</div>
+                    <p>"Very informative session. Solar industry mein job ke saath entrepreneurship ke options bhi explain kiye. Kaafi new cheezein seekhne ko mili."</p>
+                </div>
+                <div class="tt-card">
+                    <div class="tt-header">
+                        <div class="tt-avatar" style="background:#039BE5;">M</div>
+                        <div class="tt-info">
+                            <h4>Mohit Kumar</h4>
+                            <span>1 review</span>
+                        </div>
+                    </div>
+                    <div class="tt-stars">★★★★★</div>
+                    <p>"Session simple language mein tha isliye easily understand ho gaya. Solar energy se lekar installation aur commissioning tak good overview mila."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: WHO IS THIS FOR (Image 1) -->
+    <section class="who-section">
+        <div class="container">
+            <h2 class="section-title">This Free Webinar Is <span class="text-yellow">For You</span> If...</h2>
+            
+            <div class="who-grid">
+                <div class="who-card">
+                    <div class="check-icon">✔</div>
+                    <p>You are a <strong>10th/12th pass out, ITI, Diploma or Degree holder</strong> looking for a reliable career path.</p>
+                </div>
+                <div class="who-card">
+                    <div class="check-icon">✔</div>
+                    <p>You are a <strong>student or fresher</strong> exploring high-growth job opportunities.</p>
+                </div>
+                <div class="who-card">
+                    <div class="check-icon">✔</div>
+                    <p>You are an <strong>electrician or technician</strong> who wants to upgrade skills for higher pay.</p>
+                </div>
+                <div class="who-card">
+                    <div class="check-icon">✔</div>
+                    <p>You want to start your own <strong>Solar Installation Business</strong> or Franchise.</p>
+                </div>
+            </div>
+
+            <div class="who-card-center">
+                <div class="check-icon">✔</div>
+                <p>You want to transition into the booming <strong>renewable energy sector</strong>.</p>
+            </div>
+
+            <div class="features-btn-wrap" style="text-align: center;">
+                <a href="#register" class="btn-red">Register For FREE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: ROADMAP -->
+    <section class="roadmap-section">
+        <div class="container">
+            <h2 class="section-title">Your Solar Career <span class="text-yellow">Roadmap</span> Starts Here</h2>
+            
+            <div class="roadmap-container">
+                <div class="roadmap-item">
+                    <div class="roadmap-number">01</div>
+                    <div class="roadmap-line"></div>
+                    <div class="roadmap-content">
+                        <h4>Understand</h4>
+                        <h3>Solar Energy Fundamentals</h3>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-number">02</div>
+                    <div class="roadmap-line"></div>
+                    <div class="roadmap-content">
+                        <h4>Know</h4>
+                        <h3>Career Benefits & Growth</h3>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-number">03</div>
+                    <div class="roadmap-line"></div>
+                    <div class="roadmap-content">
+                        <h4>Learn</h4>
+                        <h3>Technical Fundamentals</h3>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-number">04</div>
+                    <div class="roadmap-line"></div>
+                    <div class="roadmap-content">
+                        <h4>Explore</h4>
+                        <h3>Installation & Commissioning</h3>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-number">05</div>
+                    <div class="roadmap-line"></div>
+                    <div class="roadmap-content">
+                        <h4>Understand</h4>
+                        <h3>Site Survey & Safety</h3>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-number">06</div>
+                    <div class="roadmap-line"></div>
+                    <div class="roadmap-content">
+                        <h4>Discover</h4>
+                        <h3>Jobs & Entrepreneurship</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+   
+
+    <!-- SECTION: REGISTRATION FORM -->
+    <section class="registration-section" id="register">
+        <div class="container">
+            <div class="registration-header">
+                <h2>Ready to Explore Your <span class="text-yellow">Solar Career?</span></h2>
+                <p>Reserve your FREE seat and discover what it takes to enter the solar industry.</p>
+            </div>
+            
+            <div class="registration-container">
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="Name" class="form-control" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="tel" name="Mobile" class="form-control" placeholder="Enter your WhatsApp number" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="Email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Qualification</label>
+                        <select name="Qualification" class="form-control" required>
+                            <option value="">Select Qualification</option>
+                            <option>10th</option>
+                            <option>12th</option>
+                            <option>ITI</option>
+                            <option>Diploma</option>
+                            <option>Graduate</option>
+                            <option>Working Professional</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>What are you interested in?</label>
+                        <select name="Interest" class="form-control" required>
+                            <option value="">Select Interest</option>
+                            <option>Solar Job</option>
+                            <option>Solar Technician Career</option>
+                            <option>Solar Installation</option>
+                            <option>Entrepreneurship</option>
+                            <option>Learning Solar Skills</option>
+                            <option>Exploring Career Options</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" id="submitBtn" class="btn-red" style="margin-top: 1rem;">🚀 REGISTER FOR FREE</button>
+                    <div id="formMessage" style="display:none; text-align:center; margin-top: 1rem; font-weight:bold; color:#22C55E;">✅ Registration Successful!</div>
+                    <div class="form-safe">🔒 Your information is safe with us.</div>
+                </form>
+
+                <script>
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbx3JQRcwtrHDpRudhf2eMZsoDpnl8yE3ZJxndsYqef8jftAG76O9yB3oa2lNsbeCrC1_w/exec'; // Add your Web App URL here
+                    const THANK_YOU_URL = 'https://courses.aeero.ac.in/solar-webinar-thankyou'; // Change here if the redirect target changes
+                    const form = document.getElementById('registrationForm');
+                    const submitBtn = document.getElementById('submitBtn');
+                    const formMessage = document.getElementById('formMessage');
+
+                    function goToThankYou() {
+                        // If this page is loaded inside an iframe (e.g. a builder preview),
+                        // navigate the top-level window instead of just the iframe.
+                        try {
+                            if (window.top && window.top !== window.self) {
+                                window.top.location.href = THANK_YOU_URL;
+                                return;
+                            }
+                        } catch (e) {
+                            // Cross-origin iframe access blocked; fall back to current window.
+                        }
+                        window.location.href = THANK_YOU_URL;
+                    }
+
+                    form.addEventListener('submit', e => {
+                        e.preventDefault();
+                        if (scriptURL === '' || scriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+                            alert('⚠️ Please add your Google Apps Script URL in the code first!');
+                            return;
+                        }
+
+                        submitBtn.innerHTML = '⏳ Registering...';
+                        submitBtn.disabled = true;
+
+                        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                            .then(response => {
+                                submitBtn.style.display = 'none';
+                                formMessage.style.display = 'block';
+                                form.reset();
+                                goToThankYou();
+                            })
+                            .catch(error => {
+                                console.error('Error!', error.message);
+                                submitBtn.innerHTML = '🚀 REGISTER FOR FREE';
+                                submitBtn.disabled = false;
+                                alert('Error submitting form. Please try again.');
+                            });
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: FAQ (Image 3) -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title"><span class="text-yellow">Frequently</span> <span class="text-navy">Asked Questions</span></h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Will this webinar be free?
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <br>Yes, the webinar is 100% free to attend. You just need to register your seat.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do I need previous experience in Solar?
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <br>No previous experience is required! This webinar covers everything from the basics to advanced career opportunities.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I join the webinar?
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <br>Once you register, you will receive an email and WhatsApp message with the Zoom link to join the session.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Will recordings of the workshop be available?
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <br>No, this is a live, interactive session. We highly recommend attending live so you can ask questions directly to the trainer.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- STICKY BOTTOM BAR -->
+    <div class="sticky-bottom-bar">
+        <div class="sticky-container">
+            <div class="sticky-text-wrap">
+                <h3>FREE <del>499</del></h3>
+                <p>Price increases soon. Limited seats</p>
+            </div>
+            <a href="#register" class="sticky-btn">Register Now</a>
+        </div>
+    </div>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Select the countdown elements
+    const circles = document.querySelectorAll('.cd-circle');
+    
+    // Make sure we have 4 circles before running
+    if (circles.length === 4) {
+        // 2-day countdown, deadline fixed per visitor so it doesn't reset on every reload
+        const COUNTDOWN_SECONDS = 2 * 24 * 60 * 60;
+        let deadline = parseInt(localStorage.getItem('webinarCountdownDeadline'), 10);
+        if (!deadline || deadline < Date.now()) {
+            deadline = Date.now() + COUNTDOWN_SECONDS * 1000;
+            localStorage.setItem('webinarCountdownDeadline', deadline);
+        }
+
+        const updateTimer = () => {
+            let remainingTime = Math.max(0, Math.round((deadline - Date.now()) / 1000));
+            if (remainingTime <= 0) return;
+
+            const days = Math.floor(remainingTime / (24 * 60 * 60));
+            const hours = Math.floor((remainingTime % (24 * 60 * 60)) / (60 * 60));
+            const minutes = Math.floor((remainingTime % (60 * 60)) / 60);
+            const seconds = Math.floor(remainingTime % 60);
+
+            // Format with leading zeros
+            circles[0].textContent = days.toString().padStart(2, '0');
+            circles[1].textContent = hours.toString().padStart(2, '0');
+            circles[2].textContent = minutes.toString().padStart(2, '0');
+            circles[3].textContent = seconds.toString().padStart(2, '0');
+        };
+
+        // Initialize and run every second
+        updateTimer();
+        setInterval(updateTimer, 1000);
+    }
+
+    // FAQ Accordion Logic
+    const faqItems = document.querySelectorAll('.faq-question');
+    faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            // Toggle active class
+            parent.classList.toggle('active');
+        });
+    });
+
+    // Sticky Bottom Bar Scroll Logic
+    let lastScrollTop = 0;
+    const stickyBar = document.querySelector('.sticky-bottom-bar');
+
+    if (stickyBar) {
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop) {
+                // Scrolling DOWN - Show the bar
+                stickyBar.classList.remove('hidden');
+            } else {
+                // Scrolling UP - Hide the bar
+                // Don't hide if at the very top of the page
+                if (scrollTop > 50) {
+                    stickyBar.classList.add('hidden');
+                }
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+    }
+});
+
+    </script>
+</body>
+</html>
+
